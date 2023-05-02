@@ -2,9 +2,9 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 
-import { getContacts, getFilter } from './redux/selector';
+import { getContacts, getFilter } from '../redux/selector';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchContacts } from './redux/operations';
+import { fetchContacts } from '../redux/operations';
 import { useEffect } from 'react';
 
 export const App = () => {

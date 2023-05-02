@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import styles from './Filter.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFiltered } from 'components/redux/contactsSlice';
-import { getFilter } from 'components/redux/selector';
+import { setFiltered } from 'redux/contactsSlice';
+import { getFilter } from 'redux/selector';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -22,8 +21,3 @@ export const Filter = () => {
 };
 
 export default Filter;
-
-Filter.propTypes = {
-  filter: PropTypes.string,
-  onChange: PropTypes.func,
-};

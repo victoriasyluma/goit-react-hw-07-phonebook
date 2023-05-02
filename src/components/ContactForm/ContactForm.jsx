@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import styles from './ContactForm.module.scss';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'components/redux/operations';
+import { addContact } from 'redux/operations';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -51,10 +50,4 @@ export const ContactForm = () => {
       <button type="submit">Add Contact</button>
     </form>
   );
-};
-
-export default ContactForm;
-
-ContactForm.propTypes = {
-  onSubmit: PropTypes.func,
 };

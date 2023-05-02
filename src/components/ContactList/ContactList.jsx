@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 import styles from './ContactList.module.scss';
-import PropTypes from 'prop-types';
+
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../redux/operations';
-import { getContacts, getFilter } from 'components/redux/selector';
+import { deleteContact } from '../../redux/operations';
+import { getContacts, getFilter } from 'redux/selector';
 import { useSelector } from 'react-redux';
 
 export const ContactList = () => {
@@ -74,16 +74,4 @@ export const ContactList = () => {
       </div>
     </div>
   );
-};
-
-export default ContactList;
-
-ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      phone: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-    })
-  ),
 };
